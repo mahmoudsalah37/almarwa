@@ -35,73 +35,80 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       drawerScrimColor: Colors.grey.withOpacity(0.3),
       endDrawer: Drawer(
-        child: ListView(
-          children: [
-            ActionWidget(
-              'الرئيسية',
-              onTap: () async {
-                Navigator.of(context).pop();
-
-                srollIndex(0);
-              },
-            ),
-            SizedBox(height: 8),
-            ActionWidget(
-              'عنا',
-              onTap: () async {
-                Navigator.of(context).pop();
-                srollIndex(1);
-              },
-            ),
-            SizedBox(height: 8),
-            ActionWidget(
-              'منتجاتنا',
-              onTap: () async {
-                Navigator.of(context).pop();
-                srollIndex(2);
-              },
-            ),
-            SizedBox(height: 8),
-            ActionWidget(
-              'أعمالنا',
-              onTap: () async {
-                Navigator.of(context).pop();
-                srollIndex(3);
-              },
-            ),
-            SizedBox(height: 8),
-            Container(
-              margin: const EdgeInsets.all(0),
-              child: TextButton(
-                style: ButtonStyle(
-                  padding: MaterialStateProperty.all(const EdgeInsets.all(20)),
-                  backgroundColor:
-                      MaterialStateProperty.all(theme.primaryColor),
-                ),
-                onPressed: () async {
+        child: Container(
+          color: Colors.blue[900],
+          child: ListView(
+            children: [
+              ActionWidget(
+                'الرئيسية',
+                onTap: () async {
                   Navigator.of(context).pop();
-                  srollIndex(4);
+
+                  srollIndex(0);
                 },
-                child: Text(
-                  'تواصل معنا',
-                  style: theme.textTheme.headline5.copyWith(
-                      color: Colors.white, fontWeight: FontWeight.bold),
+              ),
+              SizedBox(height: 8),
+              ActionWidget(
+                'عنا',
+                onTap: () async {
+                  Navigator.of(context).pop();
+                  srollIndex(1);
+                },
+              ),
+              SizedBox(height: 8),
+              ActionWidget(
+                'منتجاتنا',
+                onTap: () async {
+                  Navigator.of(context).pop();
+                  srollIndex(2);
+                },
+              ),
+              SizedBox(height: 8),
+              ActionWidget(
+                'أعمالنا',
+                onTap: () async {
+                  Navigator.of(context).pop();
+                  srollIndex(3);
+                },
+              ),
+              SizedBox(height: 8),
+              Container(
+                margin: const EdgeInsets.all(0),
+                child: TextButton(
+                  style: ButtonStyle(
+                    padding:
+                        MaterialStateProperty.all(const EdgeInsets.all(20)),
+                    backgroundColor:
+                        MaterialStateProperty.all(theme.primaryColor),
+                  ),
+                  onPressed: () async {
+                    Navigator.of(context).pop();
+                    srollIndex(4);
+                  },
+                  child: Text(
+                    'تواصل معنا',
+                    style: theme.textTheme.headline5.copyWith(
+                        color: Colors.white, fontWeight: FontWeight.bold),
+                  ),
                 ),
               ),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
       appBar: AppBar(
         toolbarHeight: 70,
+        backgroundColor: Colors.blue[900],
         iconTheme: IconThemeData(color: theme.primaryColor),
-        backgroundColor: Colors.transparent,
-        foregroundColor: Colors.transparent,
-        title: Image.asset(
-          'assets/images/logo.png',
-          height: 100,
-          width: 120,
-        ),
+        // backgroundColor: Colors.transparent,
+        // foregroundColor: Colors.transparent,
+        // title: Image.asset(
+        //   'assets/images/logo.jpg',
+        //   height: 100,
+        //   width: 120,
+        // ),
+        title: Text('شركة المروة',
+            style: theme.textTheme.headline1.copyWith(color: Colors.white)),
         elevation: 0,
         actions: res.size.width > 800
             ? [
@@ -150,7 +157,7 @@ class _HomePageState extends State<HomePage> {
                 ),
                 SizedBox(height: 8),
                 Container(
-                  margin: const EdgeInsets.all(0),
+                  margin: const EdgeInsets.all(2),
                   child: TextButton(
                     style: ButtonStyle(
                       padding:

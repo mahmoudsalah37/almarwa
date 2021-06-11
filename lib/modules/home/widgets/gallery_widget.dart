@@ -11,7 +11,6 @@ class GalleryWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
     return InkWell(
-      key: key,
       child: Container(
         margin: const EdgeInsets.symmetric(vertical: 10),
         child: Column(
@@ -33,29 +32,17 @@ class GalleryWidget extends StatelessWidget {
                   crossAxisAlignment: WrapCrossAlignment.center,
                   children: <ProjectModel>[
                     ProjectModel(
-                        image: 'assets/images/future_city.jpg',
-                        title: '6 عمارات مدينة المستقبل',
-                        subTitle: 'مدينة المصتقبل - الهايكستب'),
+                        image: 'assets/images/p1.jpg', title: '', subTitle: ''),
                     ProjectModel(
-                        image: 'assets/images/buidling2.jpg',
-                        title: 'مشروع 8 شقق النصر',
-                        subTitle: 'مدينة نصر - شارع مصطفي النحاس'),
+                        image: 'assets/images/p2.jpg', title: '', subTitle: ''),
                     ProjectModel(
-                        image: 'assets/images/building.jpg',
-                        title: 'مشروغ عمارة طه حسن',
-                        subTitle: 'شارغ طه حسين - مدينة النزهة'),
+                        image: 'assets/images/p3.jpg', title: '', subTitle: ''),
                     ProjectModel(
-                        image: 'assets/images/building3.jpg',
-                        title: 'مشروع 14 شفة السويس',
-                        subTitle: 'جسر السويس - شارع جمال عبد الناصر'),
+                        image: 'assets/images/p4.jpg', title: '', subTitle: ''),
                     ProjectModel(
-                        image: 'assets/images/vella.jpg',
-                        title: 'مشروع فيلا الزيتون',
-                        subTitle: 'مساكن حلمية الزيتون'),
+                        image: 'assets/images/p5.jpg', title: '', subTitle: ''),
                     ProjectModel(
-                        image: 'assets/images/cafe.jpg',
-                        title: 'مشروع جدو كافية',
-                        subTitle: 'مساكن شيرتون - شارع البحر'),
+                        image: 'assets/images/p6.jpg', title: '', subTitle: ''),
                   ]
                       .mapIndexed((projectModel, index) => ProjectWidget(
                             index: index,

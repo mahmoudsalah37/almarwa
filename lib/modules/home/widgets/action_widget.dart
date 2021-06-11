@@ -38,6 +38,7 @@ class _ActionWidgetState extends State<ActionWidget> {
               style: theme.headline6.copyWith(
                 fontWeight: isHover ? FontWeight.w300 : FontWeight.w200,
                 fontSize: isHover ? 19 : 18,
+                color: Colors.white,
                 decoration:
                     isHover ? TextDecoration.underline : TextDecoration.none,
                 decorationThickness: 2,

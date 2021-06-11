@@ -9,7 +9,6 @@ class ServicesWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
     return Container(
-      key: key,
       // color: Colors.grey[50],
       padding: const EdgeInsets.symmetric(vertical: 60),
       child: Column(

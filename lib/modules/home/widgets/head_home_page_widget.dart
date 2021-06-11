@@ -16,6 +16,17 @@ class HeadHomePageWidget extends StatelessWidget {
     return Stack(
       key: key,
       children: [
+        Container(
+          height: res.getHeight(100),
+          width: double.infinity,
+          decoration: BoxDecoration(
+            image: DecorationImage(
+              alignment: Alignment(-0.7, 0),
+              fit: BoxFit.fill,
+              image: AssetImage('assets/images/background.jpg'),
+            ),
+          ),
+        ),
         AnimationConfiguration.staggeredList(
             position: 0,
             delay: Duration(milliseconds: 300),
@@ -23,20 +34,23 @@ class HeadHomePageWidget extends StatelessWidget {
             child: SlideAnimation(
                 verticalOffset: 50.0,
                 child: FadeInAnimation(
-                    child: Container(
-                  height: res.getHeight(85),
-                  width: double.infinity,
-                  decoration: BoxDecoration(
-                    image: DecorationImage(
-                      alignment: Alignment(-0.7, 0),
-                      fit: BoxFit.contain,
-                      image: AssetImage('assets/images/tanks.png'),
+                    child: Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Container(
+                    height: res.getHeight(65),
+                    width: double.infinity,
+                    decoration: BoxDecoration(
+                      image: DecorationImage(
+                        alignment: Alignment(-0.7, 0),
+                        fit: BoxFit.contain,
+                        image: AssetImage('assets/images/watertank.png'),
+                      ),
                     ),
                   ),
                 )))),
         Positioned(
             right: res.getWidth(10),
-            top: res.getHeight(15),
+            top: res.getHeight(res.size.width > 800 ? 15 : 60),
             child: Column(
               mainAxisSize: MainAxisSize.min,
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -45,7 +59,7 @@ class HeadHomePageWidget extends StatelessWidget {
                   'شركة المروة\nلجميع أنواع الخزانات',
                   style: theme.textTheme.headline1.copyWith(
                     fontSize: res.size.width > 800 ? 70 : 40,
-                    color: theme.accentColor,
+                    color: Colors.white,
                     // shadows: [
                     //   BoxShadow(
                     //       color: Colors.grey, spreadRadius: 1, blurRadius: 2)
@@ -57,7 +71,7 @@ class HeadHomePageWidget extends StatelessWidget {
                   child: Text(
                     "شركتنا تعمل علي مدار 24 ساعة لأنتاج أفضل الخزانات بأحدث أدوات التصنيع .",
                     style: theme.textTheme.bodyText2.copyWith(
-                      color: Colors.grey[600],
+                      color: Colors.white,
                       shadows: [
                         BoxShadow(
                             color: Colors.grey, spreadRadius: 1, blurRadius: 1)
