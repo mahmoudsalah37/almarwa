@@ -42,12 +42,8 @@ class ContactUsWidget extends StatelessWidget {
                 ContactWidget(
                   title: 'الهاتف:',
                   text:
-                      '+20 114 111 4261\n+20 127 338 9645\n+20 109 325 4382\n',
+                      '+20 114 111 4261\n+20 106 773 3762\n+20 109 325 4382\n',
                 ),
-                // ContactWidget(
-                //   title: 'الإيميل:',
-                //   text: 'mahmoudsalah37@gmail.com',
-                // ),
               ],
             ),
           ),
@@ -73,15 +69,15 @@ class ContactUsWidget extends StatelessWidget {
                             'new tab');
                       },
                     ),
-                    SocailIconWidget(
-                      icon: 'assets/images/instagram.svg',
-                    ),
-                    SocailIconWidget(
-                      icon: 'assets/images/linkedin.svg',
-                    ),
-                    SocailIconWidget(
-                      icon: 'assets/images/whatsapp.svg',
-                    ),
+                    // SocailIconWidget(
+                    //   icon: 'assets/images/instagram.svg',
+                    // ),
+                    // SocailIconWidget(
+                    //   icon: 'assets/images/linkedin.svg',
+                    // ),
+                    // SocailIconWidget(
+                    //   icon: 'assets/images/whatsapp.svg',
+                    // ),
                   ],
                 ),
               ],

@@ -21,7 +21,7 @@ class HeadHomePageWidget extends StatelessWidget {
           width: double.infinity,
           decoration: BoxDecoration(
             image: DecorationImage(
-              alignment: Alignment(-0.7, 0),
+              alignment: Alignment(-0.6, 0),
               fit: BoxFit.fill,
               image: AssetImage('assets/images/background.jpg'),
             ),
@@ -49,7 +49,7 @@ class HeadHomePageWidget extends StatelessWidget {
                   ),
                 )))),
         Positioned(
-            right: res.getWidth(10),
+            right: res.getWidth(15),
             top: res.getHeight(res.size.width > 800 ? 15 : 60),
             child: Column(
               mainAxisSize: MainAxisSize.min,

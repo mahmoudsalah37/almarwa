@@ -1,6 +1,5 @@
 import 'package:almarwa/models/project_model.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_staggered_animations/flutter_staggered_animations.dart';
 
 import 'text_gallery_widget.dart';
 import '../../../extensions/list_extension.dart';
@@ -26,30 +25,28 @@ class GalleryWidget extends StatelessWidget {
               style: theme.textTheme.bodyText2.copyWith(color: Colors.grey),
             ),
             SizedBox(height: 20),
-            AnimationLimiter(
-              child: Wrap(
-                  direction: Axis.horizontal,
-                  crossAxisAlignment: WrapCrossAlignment.center,
-                  children: <ProjectModel>[
-                    ProjectModel(
-                        image: 'assets/images/p1.jpg', title: '', subTitle: ''),
-                    ProjectModel(
-                        image: 'assets/images/p2.jpg', title: '', subTitle: ''),
-                    ProjectModel(
-                        image: 'assets/images/p3.jpg', title: '', subTitle: ''),
-                    ProjectModel(
-                        image: 'assets/images/p4.jpg', title: '', subTitle: ''),
-                    ProjectModel(
-                        image: 'assets/images/p5.jpg', title: '', subTitle: ''),
-                    ProjectModel(
-                        image: 'assets/images/p6.jpg', title: '', subTitle: ''),
-                  ]
-                      .mapIndexed((projectModel, index) => ProjectWidget(
-                            index: index,
-                            projectModel: projectModel,
-                          ))
-                      .toList(growable: false)),
-            ),
+            Wrap(
+                direction: Axis.horizontal,
+                crossAxisAlignment: WrapCrossAlignment.center,
+                children: <ProjectModel>[
+                  ProjectModel(
+                      image: 'assets/images/p1.jpg', title: '', subTitle: ''),
+                  ProjectModel(
+                      image: 'assets/images/p7.jpg', title: '', subTitle: ''),
+                  ProjectModel(
+                      image: 'assets/images/p8.jpg', title: '', subTitle: ''),
+                  ProjectModel(
+                      image: 'assets/images/p4.jpg', title: '', subTitle: ''),
+                  ProjectModel(
+                      image: 'assets/images/p5.jpg', title: '', subTitle: ''),
+                  ProjectModel(
+                      image: 'assets/images/p6.jpg', title: '', subTitle: ''),
+                ]
+                    .mapIndexed((projectModel, index) => ProjectWidget(
+                          index: index,
+                          projectModel: projectModel,
+                        ))
+                    .toList(growable: false)),
           ],
         ),
       ),
@@ -63,30 +60,21 @@ class ProjectWidget extends StatelessWidget {
   final ProjectModel projectModel;
   @override
   Widget build(BuildContext context) {
-    return AnimationConfiguration.staggeredGrid(
-      position: index,
-      duration: const Duration(milliseconds: 775),
-      columnCount: 4,
-      child: ScaleAnimation(
-        child: FadeInAnimation(
-          child: Container(
-            height: 300,
-            width: 270,
-            margin: const EdgeInsets.all(6),
-            decoration: BoxDecoration(
-              image: DecorationImage(
-                fit: BoxFit.cover,
-                image: AssetImage(projectModel.image),
-              ),
-            ),
-            child: Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 4),
-              child: TextGalleryWidget(
-                title: projectModel.title,
-                subTitle: projectModel.subTitle,
-              ),
-            ),
-          ),
+    return Container(
+      height: 300,
+      width: 270,
+      margin: const EdgeInsets.all(6),
+      decoration: BoxDecoration(
+        image: DecorationImage(
+          fit: BoxFit.cover,
+          image: AssetImage(projectModel.image),
+        ),
+      ),
+      child: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 4),
+        child: TextGalleryWidget(
+          title: projectModel.title,
+          subTitle: projectModel.subTitle,
         ),
       ),
     );
